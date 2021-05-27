@@ -1,0 +1,43 @@
+.richard{
+    font-family: "courier";
+     text-align: center;
+     width: 50%;
+     padding: 10px;
+     font-size: 150%;
+  
+       margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      background-color: #fffacd;
+  }
+
+  body {
+    background-image: url('fog.png');
+    background-position: 100px 0px;
+    background-attachment: fixed;
+    height: 2000px;
+
+  }
+
+  .bottomMenu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    border-top: 1px solid #000;
+    background: red;
+    z-index: 1;
+    transition: all 1s;
+  }
+  .hide {
+    opacity: 0;
+    left: -100%;
+  }
+  .show {
+    opacity: 1;
+    left: 0;
+  }
+  
