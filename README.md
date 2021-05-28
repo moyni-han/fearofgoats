@@ -1,4 +1,4 @@
 # Fear of Goats
-## `Redefining Impossible`
+### `Redefining Impossible`
 
 [fearofgoats.com](https://fearofgoats.com)
