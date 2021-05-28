@@ -1,0 +1,110 @@
+.header {
+  font-size: 5vmin;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+
+  background: white;
+  width: 100%;
+  height: 2vw;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 3vmin;
+
+  padding: .5vh 1.2vw;
+}
+
+.footer .links {
+  display: flex;
+  align-items: center;
+  text-align: right;
+
+  position: absolute;
+  right: 3vw;
+}
+
+.footer .links a, .footer .links .link-seperator {
+  display: inline;
+}
+
+.footer .links a {
+  font-size: 2vmin;
+}
+
+.footer .links .link-seperator {
+  margin: 0 .2vw;
+  font-size: 3vmin;
+}
+
+.section {
+  height: 100%;
+  width: 100%;
+
+  background: lemonchiffon;
+
+  overflow: hidden;
+  position: relative;
+}
+
+
+#title-section {
+  background: url('./fearofgoats.png');
+  background-color: black;
+  background-repeat: repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#title-section .title {
+  background: lemonchiffon;
+  font-size: 10vmin;
+  padding: 2vmin 5vmin;
+}
+
+.section-header {
+  font-size: 6.5vw;
+  margin: 4vmin 5vmin;
+}
+
+.section-big-desc {
+  font-size: 5vw;
+  font-weight: bold;
+
+  margin: 6vh 15vmin 0;
+
+  text-align: left;
+}
+
+.section-img {
+  position: absolute;
+  right: 10vw;
+  top: 2vh;
+  bottom: 0;
+
+  margin: auto;
+
+  width: auto;
+  height: 80%;
+}
+
+.img-decal {
+  position: absolute;
+  right: 8vw;
+  height: 100%;
+
+  top: 2vh;
+
+  font-size: 6vmin;
+
+  display: flex;
+  align-items: center;
+
+  margin: auto;
+}

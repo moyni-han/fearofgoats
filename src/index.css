@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  background: lemonchiffon;
+}
+
+#root,
+.app,
+.app > div,
+body,
+html {
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: inherit;
+  display: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(160, 157, 129);
+}
