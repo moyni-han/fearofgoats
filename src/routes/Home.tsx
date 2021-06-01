@@ -20,14 +20,14 @@ export default function Home() {
   return (
     <div>
       <div className="section" id="title-section">
-        <div className="title">FEAR OF GOATS</div>
+        <div className="title">SUMMER 2021</div>
       </div>
       <div className="section" id="fall-section">
-        <div className="section-header">&gt; THE FALL COLLECTION</div>
+        <div className="section-header">&gt; THE SUMMER COLLECTION</div>
         <div className="section-big-desc">
-          DEFINITIVE. <br />
-          UNIQUE. <br />
-          GOATS.
+          NEW. <br />
+          CLASSY. <br />
+          GOATS.  
         </div>
 
         {/* Inefficient but whatever, also imagine commenting jsx */}
