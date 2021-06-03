@@ -15,7 +15,7 @@
 
   font-size: 3vmin;
 
-  padding: .5vh 1.2vw;
+  padding: 0.5vh 1.2vw;
 }
 
 .footer .links {
@@ -27,7 +27,8 @@
   right: 3vw;
 }
 
-.footer .links a, .footer .links .link-seperator {
+.footer .links a,
+.footer .links .link-seperator {
   display: inline;
 }
 
@@ -36,7 +37,7 @@
 }
 
 .footer .links .link-seperator {
-  margin: 0 .2vw;
+  margin: 0 0.2vw;
   font-size: 3vmin;
 }
 
@@ -49,7 +50,6 @@
   overflow: hidden;
   position: relative;
 }
-
 
 #title-section {
   background: url('./fearofgoats.png');
@@ -107,4 +107,49 @@
   align-items: center;
 
   margin: auto;
+}
+
+#summer-img {
+  width: 35%;
+  height: auto;
+
+  right: 2vw;
+}
+
+#fall-section {
+  background: rgb(197, 193, 158);
+}
+
+#spring-section {
+  background: black;
+  color: white;
+}
+
+.spring-decal {
+  transform-origin: center;
+  position: absolute;
+  font-size: 5vmin;
+
+  font-weight: bold;
+  transform: rotate(90deg);
+
+  right: -80vmin;
+  bottom: 20vh;
+}
+
+.spring-decal.s1 {
+  right: -76vmin;
+  bottom: 30vh;
+}
+
+.spring-decal.s2 {
+  right: -72vmin;
+  bottom: 40vh;
+}
+
+.center {
+  font-size: 10vmin;
+  margin: 30vh auto;
+  text-align: center;
+  width: 100%;
 }
