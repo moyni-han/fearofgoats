@@ -5,55 +5,36 @@ import summerImg from '../summer.png';
 
 export default function Home() {
   let [scroll, setScroll] = useState(0);
+  let [timerText, setTimerText] = useState('');
 
   useEffect(() => {
     function onScroll() {
-      console.log('eee');
-      console.log(scroll);
       setScroll(window.scrollY);
-//       // Set the date we're counting down to
-// var countDownDate = new Date("July 5, 2021 15:37:25").getTime();
-
-// // Update the count down every 1 second
-// var x = setInterval(function() {
-
-//   var now = new Date().getTime();
-    
-  
-//   var distance = countDownDate - now;
-    
-//   // Time calculations for days, hours, minutes and seconds
-//   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-//   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-//   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-//   // Output the result in an element with id="demo"
-
-//   document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-    
-//   // If the count down is over, write some text 
-//   if (distance < 0) {
-//     clearInterval(x);
-//   }
-// }, 1000);
     }
 
-    console.log('e');
     window.addEventListener('scroll', onScroll);
-    //return () => window.removeEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   });
 
-  
-  
+  // Run this code once
+  useEffect(() => {
+    // Trigger a date update every .2 seconds
+    const eventDate = new Date('July 5, 2021 15:37:25');
+    let interval = setInterval(() => {
+      setTimerText(parseDate(eventDate));
+    }, 200);
+
+    // in useEffect, you return the cleanup function. This will be run when the component unmounts.
+    return () => clearInterval(interval);
+  }, []); // useEffect will fire whenever the variables in the array change. Since it's empty, it will only run once.
+
   return (
     <div>
       <div className="section" id="title-section">
         <div className="title">SUMMER 2021</div>
       </div>
       <div className="section" id="summer-section">
-        <div className="section-header">&gt; THE SUMMER COLLECTION
-        </div>
+        <div className="section-header">&gt; THE SUMMER COLLECTION</div>
         <div className="section-big-desc">
           NEW. <br />
           CLASSY. <br />
@@ -77,7 +58,7 @@ export default function Home() {
         <img src={summerImg} alt="skateboarder" className="section-img" id="summer-img" />
       </div>
       <div className="section" id="fall-section">
-      <div className="section-header">&gt; THE FALL COLLECTION</div>
+        <div className="section-header">&gt; THE FALL COLLECTION</div>
 
         <div className="section-big-desc">
           UNIQUE. <br />
@@ -108,11 +89,23 @@ export default function Home() {
         <div className="spring-decal s2">WHISPERS OF SPRING WHISPERS OF SPRING WHISPERS OF SPRING</div>
 
         <div className="center">THE GOATS COME OUT TO PLAY</div>
-        <div className = "centerbaby">
-        <p className="demo">TIMER HERE</p>
-        </div>
+        <div className="timer">{timerText}</div>
       </div>
       {scroll > window.innerHeight / 2 && <Footer opacity={(scroll - window.innerHeight / 2) / (window.innerHeight / 6)} />}
     </div>
   );
+}
+
+function parseDate(date: Date) {
+  let diff = new Date(date.getTime() - Date.now()).getTime();
+
+  console.log(diff, date.getTime(), Date.now());
+
+  let d = Math.floor(diff / 1000 / 60 / 60 / 24);
+  let h = String(Math.floor(diff / 1000 / 60 / 60) % 24).padStart(2, '0');
+  let m = String(Math.floor(diff / 1000 / 60) % 60).padStart(2, '0');
+  let s = String(Math.floor(diff / 1000) % 60).padStart(2, '0');
+
+  if (d > 0) return `${d}:${h}:${m}:${s}`;
+  else return `${h}:${m}:${s}`;
 }

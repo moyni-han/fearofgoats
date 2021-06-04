@@ -125,7 +125,6 @@
   color: white;
 }
 
-
 .spring-decal {
   transform-origin: center;
   position: absolute;
@@ -149,24 +148,15 @@
 }
 
 .center {
-  font-size: 10vmin;
-  margin: 20vh auto;
+  font-size: 5vw;
+  margin: 25vh auto 0;
   text-align: center;
   width: 100%;
 }
 
-.centerbaby {
-  font-size: 7vmin;
-  margin: 5vh auto;
+.timer {
+  font-size: 3.5vw;
+  margin: 0 auto;
   text-align: center;
   width: 100%;
 }
-
-#clockdiv > div{
-  padding: 5vh;
-  border-radius: 3vh;
-  display: inline-block;
-}
-
-
-
