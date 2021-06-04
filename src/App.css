@@ -149,7 +149,14 @@
 
 .center {
   font-size: 10vmin;
-  margin: 30vh auto;
+  margin: 20vh auto;
+  text-align: center;
+  width: 100%;
+}
+
+.centerbaby {
+  font-size: 7vmin;
+  margin: 5vh auto;
   text-align: center;
   width: 100%;
 }

@@ -18,13 +18,16 @@ export default function Home() {
     //return () => window.removeEventListener('scroll', onScroll);
   });
 
+  
+  
   return (
     <div>
       <div className="section" id="title-section">
         <div className="title">SUMMER 2021</div>
       </div>
       <div className="section" id="summer-section">
-        <div className="section-header">&gt; THE SUMMER COLLECTION</div>
+        <div className="section-header">&gt; 
+        </div>
         <div className="section-big-desc">
           NEW. <br />
           CLASSY. <br />
@@ -45,10 +48,9 @@ export default function Home() {
           FEAR OF GOATS
         </div>
 
-        <img src={summerImg} alt="hoodie" className="section-img" id="summer-img" />
+        <img src={summerImg} alt="skateboarder" className="section-img" id="summer-img" />
       </div>
       <div className="section" id="fall-section">
-        <div className="section-header">&gt; THE FALL COLLECTION</div>
         <div className="section-big-desc">
           UNIQUE. <br />
           DEFINITIVE. <br />
@@ -72,12 +74,13 @@ export default function Home() {
         <img src={fallImg} alt="hoodie" className="section-img" id="fall-img" />
       </div>
       <div className="section" id="spring-section">
-        <div className="section-header">&gt; WHISPERS OF SPRING</div>
+        <div className="section-header">&gt; REMNANTS OF SPRING</div>
         <div className="spring-decal">WHISPERS OF SPRING WHISPERS OF SPRING WHISPERS OF SPRING</div>
         <div className="spring-decal s1">WHISPERS OF SPRING WHISPERS OF SPRING WHISPERS OF SPRING</div>
         <div className="spring-decal s2">WHISPERS OF SPRING WHISPERS OF SPRING WHISPERS OF SPRING</div>
 
         <div className="center">THE GOATS COME OUT TO PLAY</div>
+        <div className = "centerbaby">JUNE 31, 14:28</div>
       </div>
       {scroll > window.innerHeight / 2 && <Footer opacity={(scroll - window.innerHeight / 2) / (window.innerHeight / 6)} />}
     </div>
