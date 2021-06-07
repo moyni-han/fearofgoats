@@ -31,8 +31,14 @@ export default function Home() {
   return (
     <div>
       <div className="section" id="title-section">
-        <div className="title">SUMMER 2021</div>
+        <div className = "title">FEAR OF GOATS</div>
       </div>
+      <div className ="section" id = "title-section">
+         <div className="title">{timerText}</div>
+      </div>
+
+
+      
       <div className="section" id="summer-section">
         <div className="section-header">&gt; THE SUMMER COLLECTION</div>
         <div className="section-big-desc">
@@ -89,7 +95,9 @@ export default function Home() {
         <div className="spring-decal s2">WHISPERS OF SPRING WHISPERS OF SPRING WHISPERS OF SPRING</div>
 
         <div className="center">THE GOATS COME OUT TO PLAY</div>
+        <div className = "centerindent">NEXT RELEASE:</div>
         <div className="timer">{timerText}</div>
+     
       </div>
       {scroll > window.innerHeight / 2 && <Footer opacity={(scroll - window.innerHeight / 2) / (window.innerHeight / 6)} />}
     </div>

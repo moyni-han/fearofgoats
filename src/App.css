@@ -68,6 +68,8 @@
   padding: 2vmin 5vmin;
 }
 
+
+
 .section-header {
   font-size: 6.5vw;
   margin: 4vmin 5vmin;
@@ -154,8 +156,16 @@
   width: 100%;
 }
 
-.timer {
+.centerindent{
   font-size: 3.5vw;
+  margin: auto 0;
+  text-align: center;
+  width: 100%;
+
+}
+
+.timer {
+  font-size: 3vw;
   margin: 0 auto;
   text-align: center;
   width: 100%;
