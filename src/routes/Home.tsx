@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Footer from '../components/Footer';
 import fallImg from '../fall.png';
 import summerImg from '../summer.png';
+import goatImg from '../goat.png'
+// import { Masks } from "react-router";
 
 export default function Home() {
   let [scroll, setScroll] = useState(0);
@@ -19,7 +21,7 @@ export default function Home() {
   // Run this code once
   useEffect(() => {
     // Trigger a date update every .2 seconds
-    const eventDate = new Date('July 5, 2021 15:37:25');
+    const eventDate = new Date('June 30, 2031 15:37:25');
     let interval = setInterval(() => {
       setTimerText(parseDate(eventDate));
     }, 200);
@@ -32,6 +34,7 @@ export default function Home() {
     <div>
       <div className="section" id="title-section">
         <div className = "title">FEAR OF GOATS</div>
+        <br />
       </div>
       <div className ="section" id = "title-section">
          <div className="title">{timerText}</div>
@@ -63,7 +66,7 @@ export default function Home() {
 
         <img src={summerImg} alt="skateboarder" className="section-img" id="summer-img" />
       </div>
-      <div className="section" id="fall-section">
+      <div className="section" id="fall-section"> 
         <div className="section-header">&gt; THE FALL COLLECTION</div>
 
         <div className="section-big-desc">
@@ -88,6 +91,37 @@ export default function Home() {
 
         <img src={fallImg} alt="hoodie" className="section-img" id="fall-img" />
       </div>
+
+      <div className = "section" id = "sheep">
+        <div className = "section-header">&gt; FOR THE "SHEEP"</div>
+        <div className="section-big-desc">
+          AND. <br />
+          OTHER. <br />
+          GOATS.
+        </div>
+
+        <div className="img-decal">
+          MASKS <br />
+          NECKLACES <br />
+          BRACELETS<br />
+          TRINKETS <br />
+          TRASH <br />
+          CONSUMERISM <br />
+          $$$$ <br />
+          🗑🗑🗑🗑🗑🗑🗑<br />
+          CAPITALISM <br />
+          FEAR OF GOATS
+        </div>
+        {/* <img src={goatImg} alt="hoodie" className="section-img" id="goat-img" /> */}
+        <img src={goatImg} id="goat-footer"/>
+
+
+
+        
+      </div>
+
+
+
       <div className="section" id="spring-section">
         <div className="section-header">&gt; WHISPERS OF SPRING</div>
         <div className="spring-decal">WHISPERS OF SPRING WHISPERS OF SPRING WHISPERS OF SPRING</div>
@@ -99,6 +133,7 @@ export default function Home() {
         <div className="timer">{timerText}</div>
      
       </div>
+      
       {scroll > window.innerHeight / 2 && <Footer opacity={(scroll - window.innerHeight / 2) / (window.innerHeight / 6)} />}
     </div>
   );

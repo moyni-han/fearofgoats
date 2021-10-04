@@ -118,6 +118,14 @@
   right: 2vw;
 }
 
+#goat-img{
+ width: 20%;  
+ height: auto;
+ transform: rotate(90deg);
+ right: 20vh;
+  
+}
+
 #fall-section {
   background: rgb(197, 193, 158);
 }
@@ -125,6 +133,15 @@
 #spring-section {
   background: black;
   color: white;
+}
+
+#sheep {
+  background: white;
+  color: black;
+}
+#goat-footer{
+  bottom: 0vh;
+  position: absolute;
 }
 
 .spring-decal {

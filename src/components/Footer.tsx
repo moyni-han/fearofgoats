@@ -10,6 +10,8 @@ export default function Footer(props: { opacity: number }) {
         <a href="/">Sustainability</a>
         <div className="link-seperator">|</div>
         <a href="/">Privacy Policy</a>
+          <div className="link-seperator">|</div>
+        <a href="/">We Will Sell Your Data</a>
       </div>
     </div>
   );
